@@ -11,7 +11,10 @@
 ---
 <br/><br/><br/>
 ---
-<h3 align="center">[Revision history]</h3>
+## Revision History
+
 | Revision date | Version # | Description | Author |
-|:-------------:|:--------:|:-----------:|:------:|
-|               |    1.0   | First Draft | 김현경 |
+|---------------|----------|-------------|--------|
+| 2026-03-27 | 1.0 | First Draft | 김현경 |
+|             |          |             |        |
+|             |          |             |        |
