@@ -94,16 +94,7 @@ References .....................................................................
 <h2 align="center">3. Use case list</h2>
 
 
-Find use cases in your project.
 
-Make your short description for each use case (table type).
-
-12pt, 160%.
-
-ex)
-
-Login
-<div style="overflow-x:auto"><table cellspacing="0" class="borderfill-2" style=" width: 167.34mm; border-collapse: collapse; "><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Actor</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Customer, Manager</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Description</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">고객과 매니저가 각자 자신의 아이디로 로그인한다.</p></td></tr></table></div>
 
 ---
 <br/><br/><br/>
