@@ -6,7 +6,8 @@
 <img width="300" height="300" alt="스크린샷 2026-03-27 004402" src="https://github.com/user-attachments/assets/43ec66a6-59cd-40d5-897b-f18f5c28ea2e" />
 </p>
 <p align="center">
-22413554 <br/>  김현경 <br/> 2120khk@naver.com</p>
+22413554 <br/>  김현경 <br/> 2120khk@naver.com(
+rhdiddl7899@yu.ac.kr)</p>
 
 ---
 <br/><br/><br/>
