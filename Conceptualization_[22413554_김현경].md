@@ -47,7 +47,8 @@ References .....................................................................
 <h2 align="center">Business purpose</h2>
 
 
-Project background
+<h3>Project background</h3>
+
 <img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/f22ecdca-d252-4fb1-b52e-1ea2146381bc" />
 
 motivation
