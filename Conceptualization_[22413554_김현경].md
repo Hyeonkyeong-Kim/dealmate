@@ -168,13 +168,77 @@ References .....................................................................
 ---
 <h2 align="center">4. Concept of operation</h2>
 
-Describe how to operate the use cases (table type).
-12pt, 160%.
+1)회원가입
 
-ex)
+| purpose | 신규 이용자가 사이트를 이용하기 위한 회원(식별 정보) 등록 |
+| --- | --- |
+| approach | 사이트 전반적인 활동 및 참여를 위한 권한을 제공한다. 사용자의 거주지 및 아이디, 비밀번호를 기입하여야 등록된다. |
+| dynamics | 사이트의 전반적인 기능을 사용하기 위해 권한을 부여받아야 하는 경우 |
+| goals | 회원가입 기능을 작동하게 한다. |
+2) 로그인
 
-Login
-<div style="overflow-x:auto"><table cellspacing="0" class="borderfill-2" style=" width: 167.34mm; border-collapse: collapse; "><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Purpose</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">앱을 사용하기 위해 등록된 사용자인지 확인</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Approach</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">사용자가 앱을 실행 후 로그인 시,ID, PW를 입력 후 로그인을 요청하면 서버에서 회원 정보를 조회 후 로그인 성공/실패 여부 확인한다.</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Dynamics</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">앱 실행 시 로그인할 경우</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Goals</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">로그인 기능을 구현한다.</p></td></tr></table></div>
+| purpose | 등록된 이용자에 한하여 공동구매 참여 및 활동 권한을 부여해 서비스 제공 |
+| --- | --- |
+| approach | 아이디와 비밀번호를 입력 후 로그인 버튼을 실행시 DB와 비교하여 일치할 경우 로그인 성공 여부를 확인한다. |
+| dynamics | 사이트 방문 시 본인의 데이터 조회 및 기능 사용을 위해 로그인 할 경우 |
+| goals | 로그인 기능을 구현한다. |
+3) 로그아웃
+
+| purpose | 다른 아이디로 로그인을 하고 싶을 경우, 사이트 방문이 필요하지 않을 경우 로그아웃 |
+| --- | --- |
+| approach | 로그아웃을 할 수 있게 한다. |
+| dynamics | 사이트에서 벗어나거나 로그아웃 버튼을 작동했을 경우 |
+| goals | 로그아웃 기능을 구현한다. |
+4) 동네/관심사 설정
+
+| purpose | 가입 시 등록한 주소와 다른 곳에 거주 중으로 변경이 필요할 경우와 필터링한 카테고리 노출 |
+| --- | --- |
+| approach | 이용자가 거주하는 ‘동’정보를 선택하면 지역 필드에 정보 업데이트한다. |
+| dynamics | 맞춤형 정보를 공유받고 싶을 경우 |
+| goals | 이용자의 실질적인 정보만 노출하여 맞춤형 환경을 제공한다. |
+5) 특가 정보글 작성
+
+| purpose | 공동구매 참여 유도와 특가 정보를 공유 |
+| --- | --- |
+| approach | 이용자가 제목 및 본문 내용에 사진 혹은 링크를 첨부하여 등록하여 게시하면 게시판(커뮤니티) DB에 저장한다. |
+| dynamics | 지역 주민과 정보를 공유하거나 공구 참여 유도 할 경우 |
+| goals | 광고(비슷한 문구, 여러 번 게시되는 글)를 제한하며 좋은 정보를 알릴 수 있도록 한다. |
+6) 데이터 자동추출
+
+| purpose | 특가 정보글 작성 시 편리함 제공 |
+| --- | --- |
+| approach | 본문에 사진 혹은 링크 첨부했을 경우 텍스트 정보를 OCR 하여 자동 입력되도록 한다. 참고) 구글 ml kit 텍스트 인식 |
+| dynamics | 정보글 작성 시 시간 절약하고 싶은 경우 |
+| goals | 편리함을 높여서 정보 활성화 및 내용 간편화하도록 한다. |
+7) 공구 방 생성 및 참가
+
+| purpose | 여러 사람이 원하는 상품을 할인된 가격으로 구매하고 싶을 경우 모집 |
+| --- | --- |
+| approach | 최대 인원(최대 주문 가능한 옵션 개수)을 설정 후 게시글 작성하도록 한다. |
+| dynamics | 특가 혹은 할인된 가격으로 구매하고 싶은 인원이 2명 이상일 경우 |
+| goals | 낮은 금액과 실시간 게시글로 인해 공동 구매가 참여를 원활하게 이루어지도록 한다. |
+8) 정산 금액 공지
+
+| purpose | 총 결제 금액/구매자 정산 계산을 할 투명/편리하게 하고 싶을 경우 |
+| --- | --- |
+| approach | 방장이 영수증 인증(ocr)을 하면 인식하여 인당 금액을 계산테이블을 통해 안내한다. |
+| dynamics | 구매 완료 후 방장에게 입금하거나 방장이 입금 요청을 해야 하는 경우 |
+| goals | 영수증 인증을 통해 정확한 계산이 가능하도록 ocr 문자인식과 계산 오류를 줄인다. |
+9) 별점 등록
+
+| purpose | 신뢰도를 관리하고 재매칭 여부 선택 |
+| --- | --- |
+| approach | 공동구매 후 1점!~5점 사이의 점수를 이용자가 선택할 수 있도록 한다. |
+| dynamics | 지역 주민 간의 이웃 네트워크 형성과 신뢰 여부를 인증할 경우 |
+| goals | 별점 평균과 리뷰 작성 기능을 구현한다. |
+10) 악성 유저 관리
+
+| purpose | 안전한 거래와 커뮤니티를 유지하기 위함 |
+| --- | --- |
+| approach | 서버에서 별점 정보를 가져와서 평균을 낸다. 평균 점수가 3점 이하 일 경우 다른 이용자가 알아볼 수 있도록 시각적 정보(유저 닉네임을 빨갛게 변환)를 제공하거나 유저의 활동을 제한한다. |
+| dynamics | 이용자가 리뷰 확인을 통해 악성 이용자 여부를 확인하고 싶은 경우 |
+| goals | 평균 별점과 리뷰를 토대로 악성 유저를 제재한다. |
+
 ---
 <br/><br/><br/>
 ---
