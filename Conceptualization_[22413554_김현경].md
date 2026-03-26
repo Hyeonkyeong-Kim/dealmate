@@ -62,7 +62,7 @@ References .....................................................................
 
 <h3>Target market</h3>
 1인 가구와 같은 합리적인 소비를 원하는 지역 주민 
-특가 판매 할 판매자
+특가 판매 할 지역 판매자
 
 System context diagram
 Build a diagram to show the relationships between“System”and“Users”.
