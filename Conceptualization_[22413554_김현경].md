@@ -65,6 +65,27 @@ References .....................................................................
 특가 판매 할 지역 판매자
 
 System context diagram
+                +----------------------+
+                |     Firebase Server  |
+                |----------------------|
+                | User / Post Data     |
+                | Trade Log / Rating   |
+                +----------+-----------+
+                           ^
+                           |
+                           |
++------------------+       |       +----------------------+
+|       User       |       |       |      DealMate System |
+|------------------|       |       |----------------------|
+| Login/Register   | ----> | ----> | OCR / Parsing        |
+| Post Hot Deal    | ----> | ----> | Auto Calculation     |
+| Create/Join Group| ----> | ----> | Room Status Update   |
+| Rate Partner     | ----> | ----> | Trust Management     |
++------------------+               +----------------------+
+         ^                                      |
+         |                                      |
+         +--------------------------------------+
+              결과 데이터 / 응답 (Output)
 Build a diagram to show the relationships between“System”and“Users”.
 Context models are used to illustrate the operational context of a system. They show what liesoutside the system boundaries.
 
