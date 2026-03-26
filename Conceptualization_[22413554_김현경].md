@@ -73,31 +73,20 @@ References .....................................................................
 <br/><br/><br/>
 ---
 <h2 align="center">2. System context diagram</h2>
-                +----------------------+
-                |     Firebase Server  |
-                |----------------------|
-                | User / Post Data     |
-                | Trade Log / Rating   |
-                +----------+-----------+
-                           ^
-                           |
-                           |
-+------------------+       |       +----------------------+
-|       User       |       |       |      DealMate System |
-|------------------|       |       |----------------------|
-| Login/Register   | ----> | ----> | OCR / Parsing        |
-| Post Hot Deal    | ----> | ----> | Auto Calculation     |
-| Create/Join Group| ----> | ----> | Room Status Update   |
-| Rate Partner     | ----> | ----> | Trust Management     |
-+------------------+               +----------------------+
-         ^                                      |
-         |                                      |
-         +--------------------------------------+
-              결과 데이터 / 응답 (Output)
-Build a diagram to show the relationships between“System”and“Users”.
-Context models are used to illustrate the operational context of a system. They show what liesoutside the system boundaries.
+<img width="904" height="1009" alt="image" src="https://github.com/user-attachments/assets/cb385707-2217-4893-a561-cec25f9d0803" />
 
-Make your description for the terms in the diagram.
+
+⦁join 회원가입
+⦁login  로그인
+⦁logout 로그아웃
+⦁information upload 특가정보 입력
+⦁select region 지역 설정
+⦁interest filter 관심사 필터 지정
+⦁ocr 가격 영수증 인식 및 링크 정보인식
+⦁create group 그룹생성
+⦁auto calculation 자동 정산금액안내
+⦁reveiw 별점 등록
+
 
 ---
 <br/><br/><br/>
