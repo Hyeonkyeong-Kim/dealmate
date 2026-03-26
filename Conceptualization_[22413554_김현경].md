@@ -49,7 +49,11 @@ References .....................................................................
 
 <h3>Project background</h3>
 
-<img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/f22ecdca-d252-4fb1-b52e-1ea2146381bc" />
+<img width="300" height="150" alt="image" src="https://github.com/user-attachments/assets/f22ecdca-d252-4fb1-b52e-1ea2146381bc" /> <img width="200" height="250" alt="image" src="https://github.com/user-attachments/assets/feb27899-d70d-445a-9962-8a1804c4f771" />
+
+
+ 2026년 기준 전쟁 및 다양한 이유로 인해 인플레이션(물가상승)을 겪고 있다. 물가상승은 식료품, 생필품 구매와 같은 기본적인 소비에도 영향을 끼친다. 이러한 영향은 1인가구에게 더 큰 문제점으로 다가온다. 2024년 기준 1인가구는 전체 가구 중 36.1%를 차지하는데 혼자 거주하는 경우에 가성비 구매와 배달비 분담이 필수적이지만 현실적으로는 어렵다. 특히 식료품과 생필품 경우에는 가성비 구매를 위해 대용량 구매가 필요한데 이 경우에는 소비기한 내에 사용이 어려워 효율이 떨어진다. 또한 배달 최소 주문금액을 충족하기 위해 불필요하게 많은 양의 음식을 주문하게 된다. 심지어 인터넷 공구 (공동구매)에서도 3+1 세트와 같이 여러 개를 구매했을 때 할인이 크게 적용되는 경우가 대부분이다. 
+ 
 
 motivation
 Goal
@@ -95,7 +99,6 @@ Specifically describe all of the terms used in this documents.
 12pt, 160%.
 
 References
-Describe all of your references (book, paper, technical report etc).
-12pt, 160%.
+2025 통계로 보는 1인가구 - https://www.kostat.go.kr/board.es?mid=a10301010000&bid=10820&act=view&list_no=442130&tag=&nPage=1&ref_bid=203,204,205,206,207,210,211,11109,11113,11814,213,215,214,11860,11695,216,218,219,220,10820,11815,11895,11816,208,245,222,223,225,226,227,228,229,230,11321,232,233,234,12029,10920,11469,11470,11817,236,237,11471,238,240,241,11865,243,244,11893,11898,12031,11825,
 
-HWP 파일은 표 텍스트만 추출, 표 포함 선택시 
+
