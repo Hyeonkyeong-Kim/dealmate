@@ -1,4 +1,4 @@
-<h1 align="center"># DEALMATE</h1>
+<h1 align="center">DEALMATE</h1>
 
 <h3 align="center">Community co-purchases</h3>
 
