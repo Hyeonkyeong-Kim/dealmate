@@ -82,11 +82,11 @@ References .....................................................................
 
 ⦁logout 로그아웃
 
-⦁information upload 특가정보 글 입력
-
 ⦁select region 지역 설정
 
 ⦁interest filter 관심사 필터 지정
+
+⦁information upload 특가정보 글 입력
 
 ⦁ocr 가격 영수증 인식 및 링크 정보인식
 
