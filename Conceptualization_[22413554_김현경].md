@@ -73,7 +73,7 @@ References .....................................................................
 <br/><br/><br/>
 ---
 <h2 align="center">2. System context diagram</h2>
-<img width="904" height="1009" alt="image" src="https://github.com/user-attachments/assets/cb385707-2217-4893-a561-cec25f9d0803" />
+<img width="450" height="550" alt="image" src="https://github.com/user-attachments/assets/cb385707-2217-4893-a561-cec25f9d0803" />
 
 
 ⦁join 회원가입
