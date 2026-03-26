@@ -49,7 +49,7 @@ References .....................................................................
 
 <h3>Project background</h3>
 
-<img width="300" height="250" alt="image" src="https://github.com/user-attachments/assets/f22ecdca-d252-4fb1-b52e-1ea2146381bc" /> <img width="250" height="200" alt="스크린샷 2026-03-27 022027" src="https://github.com/user-attachments/assets/76771d8e-b1ce-4580-9f9b-2ec3100b976b" /> <img width="200" height="250" alt="image" src="https://github.com/user-attachments/assets/feb27899-d70d-445a-9962-8a1804c4f771" />
+<img width="250" height="300" alt="image" src="https://github.com/user-attachments/assets/f22ecdca-d252-4fb1-b52e-1ea2146381bc" /> <img width="250" height="200" alt="스크린샷 2026-03-27 022027" src="https://github.com/user-attachments/assets/76771d8e-b1ce-4580-9f9b-2ec3100b976b" /> <img width="200" height="250" alt="image" src="https://github.com/user-attachments/assets/feb27899-d70d-445a-9962-8a1804c4f771" />
 
 
  2026년 기준 전쟁 및 다양한 이유로 인해 인플레이션(물가상승)을 겪고 있다. 물가상승은 식료품, 생필품 구매와 같은 기본적인 소비에도 영향을 끼친다. 이러한 영향은 1인가구에게 더 큰 문제점으로 다가온다. 2024년 기준 1인가구는 전체 가구 중 36.1%를 차지하는데 혼자 거주하는 경우에 가성비 구매와 배달비 분담이 필수적이지만 현실적으로는 어렵다. 특히 식료품과 생필품 경우에는 가성비 구매를 위해 대용량 구매가 필요한데 이 경우에는 소비기한 내에 사용이 어려워 효율이 떨어진다. 또한 배달 최소 주문금액을 충족하기 위해 불필요하게 많은 양의 음식을 주문하게 된다. 심지어 SNS 공구 (공동구매)에서도 3+1 세트와 같이 여러 개를 구매했을 때 할인이 크게 적용되는 경우가 대부분이다. 앞서 말한 공동구매가 생겨난 계기도 이러한 이유에서 비롯된다. 공동 구매는 수요가 많은 제품을 여러 명이서 구매하는 방식으로 판매자가 원 가격에서 저렴하게 판매하여 소비자는 배송비 무료와 저렴한 가격으로 구매하는 방식이다. 대부분 학생 때 교복 공동구매를 생각하면 이해가 쉬울 것이다. 이처럼 할인 상품 정보를 공유하고 그 정보를 통해 구매하고자 하는 상품이 같은 사람들끼리 모여 가성비 있는 소비를 할 수 없을까? 라는 고민이 들어 이 프로젝트를 구상하게 되었다. 
