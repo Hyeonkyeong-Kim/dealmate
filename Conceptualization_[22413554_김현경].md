@@ -44,7 +44,7 @@ References .....................................................................
 ---
 <br/><br/><br/>
 ---
-<h2 align="center">Business purpose</h2>
+<h2 align="center">1. Business purpose</h2>
 
 
 <h3>Project background</h3>
@@ -70,7 +70,10 @@ References .....................................................................
 
 ⦁ 특가 판매 할 지역 판매자
 
-System context diagram
+---
+<br/><br/><br/>
+---
+<h2 align="center">2. System context diagram</h2>
                 +----------------------+
                 |     Firebase Server  |
                 |----------------------|
@@ -97,9 +100,11 @@ Context models are used to illustrate the operational context of a system. They 
 
 Make your description for the terms in the diagram.
 
-12pt, 160%.
+---
+<br/><br/><br/>
+---
+<h2 align="center">3. Use case list</h2>
 
-3. Use case list
 
 Find use cases in your project.
 
@@ -111,7 +116,12 @@ ex)
 
 Login
 <div style="overflow-x:auto"><table cellspacing="0" class="borderfill-2" style=" width: 167.34mm; border-collapse: collapse; "><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Actor</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Customer, Manager</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Description</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">고객과 매니저가 각자 자신의 아이디로 로그인한다.</p></td></tr></table></div>
-Concept of operation
+
+---
+<br/><br/><br/>
+---
+<h2 align="center">4. Concept of operation</h2>
+
 Describe how to operate the use cases (table type).
 12pt, 160%.
 
@@ -119,17 +129,25 @@ ex)
 
 Login
 <div style="overflow-x:auto"><table cellspacing="0" class="borderfill-2" style=" width: 167.34mm; border-collapse: collapse; "><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Purpose</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">앱을 사용하기 위해 등록된 사용자인지 확인</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Approach</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">사용자가 앱을 실행 후 로그인 시,ID, PW를 입력 후 로그인을 요청하면 서버에서 회원 정보를 조회 후 로그인 성공/실패 여부 확인한다.</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Dynamics</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">앱 실행 시 로그인할 경우</p></td></tr><tr><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 35.75mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">Goals</p></td><td class="borderfill-2" colspan="1" rowspan="1" style=" width: 131.59mm; height: 6.23mm; padding: 0.5mm 1.8mm 0.5mm 1.8mm; "><p class="Normal">로그인 기능을 구현한다.</p></td></tr></table></div>
-Problem statement
+---
+<br/><br/><br/>
+---
+<h2 align="center">Problem statement</h2>
 Describe the problems the project should be considered (including technical difficulties).
 Describe the Non-Functional Requirements (NFRs).
 
-12pt, 160%.
 
-Glossary
+---
+<br/><br/><br/>
+---
+<h2 align="center">Glossary</h2>
+
 Specifically describe all of the terms used in this documents.
-12pt, 160%.
 
-References
+---
+<br/><br/><br/>
+---
+<h2 align="center">References</h2>
 2025 통계로 보는 1인가구 - https://www.kostat.go.kr/board.es?mid=a10301010000&bid=10820&act=view&list_no=442130&tag=&nPage=1&ref_bid=203,204,205,206,207,210,211,11109,11113,11814,213,215,214,11860,11695,216,218,219,220,10820,11815,11895,11816,208,245,222,223,225,226,227,228,229,230,11321,232,233,234,12029,10920,11469,11470,11817,236,237,11471,238,240,241,11865,243,244,11893,11898,12031,11825,
 
 
