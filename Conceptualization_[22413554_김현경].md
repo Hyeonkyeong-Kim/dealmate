@@ -7,3 +7,11 @@
 </p>
 <p align="center">
 22413554 <br/>  김현경 <br/> 2120khk@naver.com</p>
+
+---
+<br/><br/><br/>
+---
+<h3 align="center">[Revision history]</h3>
+| Revision date | Version # | Description | Author |
+|:-------------:|:--------:|:-----------:|:------:|
+|               |    1.0   | First Draft | 김현경 |
