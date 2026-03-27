@@ -8,9 +8,7 @@
 <p align="center">
 22413554 <br/>  김현경 <br/> 2120khk@naver.com(
 rhdiddl7899@yu.ac.kr)<br/>
- 
 https://github.com/Hyeonkyeong-Kim/dealmate
-
 </p>
 
 ---
