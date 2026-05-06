@@ -19,7 +19,7 @@ https://github.com/Hyeonkyeong-Kim/dealmate
 | Revision date | Version # | Description | Author |
 |:-------------:|:--------:|:-----------:|:------:|
 |    26-03-27   |   1.0    | First Draft   | 김현경 |
-|    26-05-05   |   1.1    |  System context diagram, use case diagram adit  |  김현경   |
+|    26-05-06   |   1.1    |  System context diagram, use case diagram adit  |  김현경   |
 |             |          |             |        |
 |             |          |             |        |
 |             |          |             |        |
