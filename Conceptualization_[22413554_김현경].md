@@ -3,7 +3,7 @@
 <h3 align="center">Community co-purchases</h3>
 
 <p align="center">
-<img width="300" height="300" alt="스크린샷 2026-03-27 004402" src="https://github.com/user-attachments/assets/43ec66a6-59cd-40d5-897b-f18f5c28ea2e" />
+<img width="672" height="257" alt="logo" src="https://github.com/user-attachments/assets/4eb2677f-dcd9-4341-aa3b-6f0d421670f6" />
 </p>
 <p align="center">
 22413554 <br/>  김현경 <br/> 2120khk@naver.com(
@@ -19,7 +19,7 @@ https://github.com/Hyeonkyeong-Kim/dealmate
 | Revision date | Version # | Description | Author |
 |:-------------:|:--------:|:-----------:|:------:|
 |    26-03-27   |   1.0    | First Draft   | 김현경 |
-|    26-05-06   |   1.1    |  System context diagram, use case diagram adit  |  김현경   |
+|    26-05-08   |   1.1    |  System context diagram, use case diagram adit  |  김현경   |
 |             |          |             |        |
 |             |          |             |        |
 |             |          |             |        |
