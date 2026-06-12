@@ -15,6 +15,8 @@ public class Database {
     private ArrayList<Post> postTable = new ArrayList<>();
     private ArrayList<GroupPurchaseRoom> roomTable = new ArrayList<>();
     private ArrayList<Settlement> settlementTable = new ArrayList<>();
+    private ArrayList<PaymentReceipt> receiptTable = new ArrayList<>();
+    private ArrayList<TransferProof> transferProofTable = new ArrayList<>();
     private final Path userDataFile = Path.of("data", "users.txt");
 
     public void initializeSampleData() {
@@ -139,6 +141,12 @@ public class Database {
             roomTable.add((GroupPurchaseRoom) object);
         } else if (object instanceof Settlement) {
             settlementTable.add((Settlement) object);
+        } else if (object instanceof PaymentReceipt) {
+            receiptTable.add((PaymentReceipt) object);
+        } else if (object instanceof TransferProof) {
+            transferProofTable.add((TransferProof) object);
+        } else if (object instanceof AdministratorManagement) {
+            // 관리자 조치 기록은 현재 시연 구현에서 사용자 상태 변경으로 반영한다.
         }
     }
 
@@ -386,8 +394,23 @@ public class Database {
         return true;
     }
 
+
+    public int nextSettlementId() {
+        return settlementTable.size() + 1;
+    }
+
+    public int nextReceiptId() {
+        return receiptTable.size() + 1;
+    }
+
+    public int nextTransferProofId() {
+        return transferProofTable.size() + 1;
+    }
+
     public ArrayList<User> getUserTable() { return userTable; }
     public ArrayList<Post> getPostTable() { return postTable; }
     public ArrayList<GroupPurchaseRoom> getRoomTable() { return roomTable; }
     public ArrayList<Settlement> getSettlementTable() { return settlementTable; }
+    public ArrayList<PaymentReceipt> getReceiptTable() { return receiptTable; }
+    public ArrayList<TransferProof> getTransferProofTable() { return transferProofTable; }
 }

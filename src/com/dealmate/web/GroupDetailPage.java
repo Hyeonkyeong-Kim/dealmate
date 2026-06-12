@@ -182,11 +182,35 @@ public class GroupDetailPage {
                         document.getElementById('modal').classList.add('show');
                     }
                     function closePopup(){ document.getElementById('modal').classList.remove('show'); }
-                    function requestSettlement(){
+                    async function requestSettlement(){
                         const total = getManualAmount();
                         if (!Number.isFinite(total) || total <= 0 || participantCount <= 0) { openPopup('정산 실패', '정산 금액 계산에 실패했습니다.'); return; }
-                        renderSettlementAmount(total);
-                        openPopup('정산 요청 완료', '현재 표시된 정산 금액으로 정산 요청이 전송되었습니다.');
+                        const body = new URLSearchParams({
+                            roomId:String(roomId),
+                            totalAmount:String(Math.floor(total)),
+                            participantCount:String(participantCount),
+                            receiptImage:'manual-input-demo-receipt.png'
+                        });
+                        const response = await fetch('/api/request-settlement', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body});
+                        const result = await response.json();
+                        if(result.success){
+                            currentTotalAmount = Number(result.totalAmount || total);
+                            participantCount = Number(result.participantCount || participantCount);
+                            renderSettlementAmount(currentTotalAmount);
+                            openPopup('정산 요청 완료', result.message || '정산 요청이 완료되었습니다.');
+                        } else {
+                            openPopup('정산 실패', result.message || '정산 금액 계산에 실패했습니다.');
+                        }
+                    }
+                    async function uploadTransferProof(){
+                        const body = new URLSearchParams({transferImage:'transfer-proof-demo.png'});
+                        const response = await fetch('/api/upload-transfer-proof', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body});
+                        const result = await response.json();
+                        if(result.success){
+                            openPopup('송금 인증 완료', result.message || '송금 인증이 완료되었습니다.');
+                        } else {
+                            openPopup('송금 인증 실패', result.message || '재업로드해주세요.');
+                        }
                     }
                     window.addEventListener('load', function(){ renderSettlementAmount(currentTotalAmount); });
                 </script>

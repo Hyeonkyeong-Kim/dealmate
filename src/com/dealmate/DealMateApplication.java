@@ -46,6 +46,8 @@ public class DealMateApplication {
         server.createContext("/api/create-room", pageController::handleCreateRoomApi);
         server.createContext("/api/join-room", pageController::handleJoinRoomApi);
         server.createContext("/api/review", pageController::handleReviewApi);
+        server.createContext("/api/request-settlement", pageController::handleRequestSettlementApi);
+        server.createContext("/api/upload-transfer-proof", pageController::handleUploadTransferProofApi);
         server.createContext("/api/admin-action", pageController::handleAdminActionApi);
         server.setExecutor(null);
         server.start();

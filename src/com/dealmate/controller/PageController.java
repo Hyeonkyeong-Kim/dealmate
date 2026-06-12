@@ -417,6 +417,99 @@ public class PageController {
         sendJson(exchange, 200, "{\"success\":true,\"message\":\"리뷰가 등록되었습니다.\",\"next\":\"/my\"}");
     }
 
+
+    public void handleRequestSettlementApi(HttpExchange exchange) throws IOException {
+        if (!"POST".equalsIgnoreCase(exchange.getRequestMethod())) {
+            sendJson(exchange, 405, "{\"success\":false,\"message\":\"Method Not Allowed\"}");
+            return;
+        }
+
+        Map<String, String> form = parseForm(readBody(exchange.getRequestBody()));
+        int roomId;
+        int totalAmount;
+        int participantCount;
+        try {
+            roomId = Integer.parseInt(form.getOrDefault("roomId", "0"));
+            totalAmount = Integer.parseInt(form.getOrDefault("totalAmount", "0"));
+            participantCount = Integer.parseInt(form.getOrDefault("participantCount", "0"));
+        } catch (NumberFormatException e) {
+            String message = screenController.showPopup("정산 금액 계산에 실패했습니다.");
+            sendJson(exchange, 200, "{\"success\":false,\"message\":\"" + escapeJson(message) + "\"}");
+            return;
+        }
+
+        GroupPurchaseRoom room = database.findRoom(roomId);
+        if (room == null || totalAmount <= 0 || participantCount <= 0) {
+            String message = screenController.showPopup("정산 금액 계산에 실패했습니다.");
+            sendJson(exchange, 200, "{\"success\":false,\"message\":\"" + escapeJson(message) + "\"}");
+            return;
+        }
+
+        String receiptImage = form.getOrDefault("receiptImage", "").trim();
+        if (receiptImage.isEmpty()) {
+            receiptImage = "manual-input-demo-receipt.png";
+        }
+
+        User currentUser = getCurrentUser();
+        Host host = new Host(currentUser.getUserId(), currentUser.getPassword(), currentUser.getEmail());
+        host.uploadPaymentReceipt(receiptImage);
+
+        PaymentReceipt receipt = new PaymentReceipt(database.nextReceiptId(), roomId, receiptImage, totalAmount);
+        receipt.uploadReceipt(receiptImage);
+        int extractedAmount = receipt.extractAmountByOCR(receiptImage);
+        if (extractedAmount <= 0) {
+            String message = screenController.showPopup("인식에 실패했습니다. 직접 입력해주세요.");
+            sendJson(exchange, 200, "{\"success\":false,\"message\":\"" + escapeJson(message) + "\"}");
+            return;
+        }
+        database.saveData(receipt);
+
+        host.requestSettlement(roomId);
+
+        Settlement settlement = new Settlement(database.nextSettlementId(), roomId, totalAmount, participantCount);
+        int amountPerPerson = settlement.calculateAmount(totalAmount, participantCount);
+        if (amountPerPerson <= 0) {
+            String message = screenController.showPopup("정산 금액 계산에 실패했습니다.");
+            sendJson(exchange, 200, "{\"success\":false,\"message\":\"" + escapeJson(message) + "\"}");
+            return;
+        }
+        settlement.updateSettlementStatus("pending");
+        database.saveData(settlement);
+
+        sendJson(exchange, 200,
+                "{\"success\":true,\"message\":\"정산 요청이 완료되었습니다.\","
+                        + "\"totalAmount\":" + totalAmount + ","
+                        + "\"participantCount\":" + participantCount + ","
+                        + "\"amountPerPerson\":" + amountPerPerson + ","
+                        + "\"status\":\"pending\"}");
+    }
+
+    public void handleUploadTransferProofApi(HttpExchange exchange) throws IOException {
+        if (!"POST".equalsIgnoreCase(exchange.getRequestMethod())) {
+            sendJson(exchange, 405, "{\"success\":false,\"message\":\"Method Not Allowed\"}");
+            return;
+        }
+
+        Map<String, String> form = parseForm(readBody(exchange.getRequestBody()));
+        String transferImage = form.getOrDefault("transferImage", "").trim();
+        if (transferImage.isEmpty()) {
+            String message = screenController.showPopup("재업로드해주세요.");
+            sendJson(exchange, 200, "{\"success\":false,\"message\":\"" + escapeJson(message) + "\"}");
+            return;
+        }
+
+        User currentUser = getCurrentUser();
+        Member member = new Member(currentUser.getUserId(), currentUser.getPassword(), currentUser.getEmail());
+        member.uploadTransferProof(transferImage);
+
+        TransferProof proof = new TransferProof(database.nextTransferProofId(), currentUser.getUserId(), transferImage);
+        proof.uploadTransferProof(transferImage);
+        proof.updateProofStatus("confirmed");
+        database.saveData(proof);
+
+        sendJson(exchange, 200, "{\"success\":true,\"message\":\"송금 인증이 완료되었습니다.\",\"status\":\"confirmed\"}");
+    }
+
     public void handleAdminActionApi(HttpExchange exchange) throws IOException {
         if (!"POST".equalsIgnoreCase(exchange.getRequestMethod())) {
             sendJson(exchange, 405, "{\"success\":false,\"message\":\"Method Not Allowed\"}");
