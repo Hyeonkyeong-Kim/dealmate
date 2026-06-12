@@ -106,3 +106,12 @@ Member.uploadTransferProof(transferImage)
 ## 관리자 구현 설명
 
 관리자는 로그인 기능을 통해 접근하므로 구현상 User 계정 정보를 함께 사용하지만, 기능적으로는 일반 사용자와 구분되어 리뷰 확인 및 사용자 제재 기능만 수행합니다.
+
+## OCR 기능 단순화 안내
+
+본 프로젝트의 정산 기능에서는 결제 영수증 업로드 영역을 제공하지만, 제출용 시연 환경에서는 실제 OCR 엔진 연동을 단순화하였다.
+
+시연에서는 OCR 인식 실패 또는 테스트 환경을 가정하여 사용자가 총 결제 금액을 직접 입력한다. 입력된 금액은 PaymentReceipt.extractAmountByOCR(receiptImage) 흐름을 거친 OCR 인식 결과로 간주되며, 이후 Settlement.calculateAmount(totalAmount, count) 메서드를 통해 1인당 정산 금액을 계산한다.
+
+따라서 실제 이미지에서 숫자를 추출하는 외부 OCR 라이브러리는 사용하지 않았으며, 정산 금액 계산 흐름과 오류 처리 흐름을 중심으로 구현하였다.
+
