@@ -44,6 +44,10 @@ http://localhost:8080/login
 ID: demo
 PW: demo123
 ```
+```text
+ID: demo1 
+PW: demo123
+```
 
 관리자:
 
